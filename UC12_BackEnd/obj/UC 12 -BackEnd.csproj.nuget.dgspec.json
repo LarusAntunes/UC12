@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC 12 -BackEnd\\UC 12 -BackEnd.csproj": {}
+    "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC12_BackEnd\\UC 12 -BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC 12 -BackEnd\\UC 12 -BackEnd.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC12_BackEnd\\UC 12 -BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC 12 -BackEnd\\UC 12 -BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC12_BackEnd\\UC 12 -BackEnd.csproj",
         "projectName": "UC 12 -BackEnd",
-        "projectPath": "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC 12 -BackEnd\\UC 12 -BackEnd.csproj",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC12_BackEnd\\UC 12 -BackEnd.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC 12 -BackEnd\\obj\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\Curso Senai\\UC-12\\UC12-SA1\\SA-2\\UC12_BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",

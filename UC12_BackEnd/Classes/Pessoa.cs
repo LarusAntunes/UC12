@@ -15,7 +15,6 @@ namespace UC12_BackEnd.Classes
         public float rendimento {get;set;}
         
         public abstract float CalcularImposto(float rendimento);
-        
     
     }
 }

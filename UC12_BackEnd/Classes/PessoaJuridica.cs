@@ -14,7 +14,29 @@ namespace UC12_BackEnd.Classes
 
         public override float CalcularImposto(float rendimento)
         {
-            throw new NotImplementedException();
+            if (rendimento <= 3000 )
+            {   
+                float resultado = (rendimento/100) * 3;
+                //ou 
+                //float resultado = rendimento * .03f; (no caso 0.03 seria 3 por cento)
+                return resultado;
+
+            }   else if (rendimento > 3000 && rendimento <= 6000 )
+            {
+                float resultado = (rendimento / 100) * 5;
+                return resultado;
+
+            }   else if (rendimento > 6000 && rendimento <= 10000 )
+            {
+                float resultado = (rendimento / 100) * 7;
+                return resultado;  
+
+            }   else
+            {
+                float resultado = (rendimento / 100) * 9;
+                return resultado;
+            }
+            
         }
 
         public bool ValidarCnpj(string cnpj)

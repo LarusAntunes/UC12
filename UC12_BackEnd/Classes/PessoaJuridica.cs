@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using UC12_BackEnd.Interfaces;
 
@@ -40,8 +41,33 @@ namespace UC12_BackEnd.Classes
         }
 
         public bool ValidarCnpj(string cnpj)
+
+            //76773415000160 (14 dígitos)
+            //76.773.415/0001-60 (18 dígitos)
         {
-            throw new NotImplementedException();
+                                                    //está sendo comparado através do método Regex o valor informado do cnpj com o 
+                                                    //padrão Regex, \d{14} informar a quantidade de digitos, no caso 14 dígitos
+            bool retornoCnpjValido = Regex.IsMatch(cnpj, @"^(\d{14})|(\d{2}.\d{3}.\d{3}/\d{4}-\d{2}) $");
+
+            if (retornoCnpjValido) //ou podemos apagar o "== true" pois o comando já valida
+            {   
+                                            //Substring lê a parte interna do código
+                string subStringCnpj14 = cnpj.Substring(8, 4); 
+                                            //vai pular 8 digitos do cnpj e irá ler 4 digitos, no caso o 0001
+                if (subStringCnpj14 == "0001")
+                {
+                    return true;
+                }else return false;
+            } 
+
+            string subStringCnpj18 = cnpj.Substring(11, 4);
+
+                if (subStringCnpj18 == "0001")
+                {
+                    return true;
+                }
+
+        return false;                           
         }
     }
 }

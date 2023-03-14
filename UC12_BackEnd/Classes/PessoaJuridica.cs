@@ -13,6 +13,8 @@ namespace UC12_BackEnd.Classes
 
         public string? razaoSocial {get;set;}
 
+        public string? Caminho {get; private set;}= "Database/PessoaJuridica.csv";
+
         public override float CalcularImposto(float rendimento)
         {
             if (rendimento <= 3000 )
@@ -69,5 +71,43 @@ namespace UC12_BackEnd.Classes
 
         return false;                           
         }
+
+        public void Inserir(PessoaJuridica pj){
+
+            Utils.VerificarPastaArquivo(Caminho);
+  
+            string [] pjstring = {$"{pj.razaoSocial},{pj.cnpj}"};
+
+            File.AppendAllLines(Caminho,pjstring);
+
+        }
+        public List<PessoaJuridica> LerArquivo()
+        {
+            //razao social, cnpj
+
+            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+            string [] linhas = File.ReadAllLines(Caminho);
+
+            foreach (string cadaLinha in linhas)
+            {
+                
+                string[] atributos = cadaLinha.Split(",");
+
+
+                PessoaJuridica cadaPj = new PessoaJuridica();
+
+                cadaPj.razaoSocial = atributos[0];
+                cadaPj.cnpj = atributos[1];
+
+                listaPj.Add(cadaPj);
+
+            }
+
+
+            return listaPj;
+        }
+
+
     }
 }
